@@ -1,13 +1,13 @@
 name: Developer
 version: 2.0.2
-description: "Developer is a free responsive **Grav** theme designed to help developers promote their work. Converting starting from v1.21 of original template."
+description: "Developer is a free responsive **Grav** theme designed to help developers promote their work."
 icon: clipboard
 author:
   name: NunoPress
   email: hello@nunopress.com
   url: http://nunopress.com
 homepage: https://github.com/nunopress/grav-theme-developer
-demo: http://grav-demo.nunopress.com
+demo: http://grav-demo.nunopress.com/themes/developer/
 keywords: "bootstrap, theme, cv, resume, responsive, html5, css3, jquery, github"
 bugs: https://github.com/nunopress/grav-theme-developer/issues
 license: MIT
