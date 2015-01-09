@@ -1,9 +1,9 @@
 name: Developer
-version: 2.0.2
+version: 2.0.3
 description: "Developer is a free responsive **Grav** theme designed to help developers promote their work."
 icon: clipboard
 author:
-  name: NunoPress
+  name: NunoPress LLC
   email: hello@nunopress.com
   url: http://nunopress.com
 homepage: https://github.com/nunopress/grav-theme-developer

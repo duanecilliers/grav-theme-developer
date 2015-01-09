@@ -1,3 +1,12 @@
+# v2.0.3
+## 01/09/2015
+
+1. [](#bugfix)
+* Small fix.
+
+1. [](#improved)
+* Update [README](README.md).
+
 # v2.0.2
 ## 01/04/2015
 
