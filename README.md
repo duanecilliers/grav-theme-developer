@@ -1,8 +1,8 @@
 # Developer
 
-![Developer](README.jpg)
+![Screenshot](README.jpg)
 
-Developer is HTML template designed by [3rd Wave Media](http://themes.3rdwavemedia.com/website-templates/free-responsive-website-template-for-developers/) and converted for [Grav](http://getgrav.org) by [NunoPress LLC](https://nunopress.com).
+This theme is a port of the [Developer HTML Template](http://themes.3rdwavemedia.com/website-templates/free-responsive-website-template-for-developers/) developed my [3rd Wave Media](http://3rdwavemedia.com) and ported to [Grav](http://getgrav.org) by [NunoPress LLC](https://nunopress.com).
 
 # Installation
 
@@ -43,7 +43,7 @@ This command will check your Grav install to see if this theme is due for an upd
 Manually updating this theme is pretty simple. Here is what you will need to do to get this done:
 
 * Delete the `your/site/user/themes/developer` directory.
-* Download the new version of the this theme from either via [GetGrav.org](http://getgrav.org/downloads/themes#extras).
+* Download the new version of the this theme from either via [GetGrav.org](http://getgrav.org/downloads/themes).
 * Unzip the zip file in `your/site/user/themes` and rename the resulting folder to `developer`.
 * Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in terminal and typing `bin/grav clear-cache`.
 
