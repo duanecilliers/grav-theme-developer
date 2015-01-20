@@ -21,6 +21,5 @@ class Developer extends Theme
   public function onTwigSiteVariables()
   {
     $this->grav['twig']->twig_vars['theme_config'] = $this->grav['config']->get('themes.developer');
-    $this->grav['twig']->twig_vars['base_url'] = $this->grav['page']->find($this->grav['config']->get('system.home.alias'))->url(true);
   }
 }

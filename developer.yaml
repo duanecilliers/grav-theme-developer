@@ -61,7 +61,7 @@ social:
 
 # Grav streams
 streams:
-  scheme:
+  schemes:
     theme:
       type: ReadOnlyStream
       paths:

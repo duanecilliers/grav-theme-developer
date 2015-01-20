@@ -1,3 +1,9 @@
+# v2.0.4
+## 01/13/2015
+
+1. [](#bugfix)
+  * Fixed page title when error template called.
+
 # v2.0.3
 ## 01/09/2015
 
