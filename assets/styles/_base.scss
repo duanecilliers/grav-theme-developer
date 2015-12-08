@@ -1,12 +1,12 @@
-@import "mixins.less";
-@import "theme-default.less";
+@import "mixins";
+@import "theme-default";
 
 /* ======= Base ======= */
 
 body {
-    font-family: 'Lato', arial, sans-serif;   
-    color: @text-color;
-    background: @background;
+    font-family: 'Lato', arial, sans-serif;
+    color: $text-color;
+    background: $background;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -15,21 +15,21 @@ body {
 h1, h2, h3, h4, h5, h6  {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: @color;
+    color: $color;
 }
 
 a {
-    color: @color-2;
-    .transition (all 0.4s ease-in-out);
+    color: $color-2;
+    @include transition (all 0.4s ease-in-out);
     &:hover {
         text-decoration: underline;
-        color: darken(@color, 10%);
-        color: darken(@color-2, 10%);
+        color: darken($color, 10%);
+        color: darken($color-2, 10%);
     }
 }
 
 .btn, a.btn {
-    .transition (all 0.4s ease-in-out);
+    @include transition (all 0.4s ease-in-out);
     font-family: 'Montserrat', arial, sans-serif;
     padding: 8px 16px;
     font-weight:bold;
@@ -42,47 +42,47 @@ a {
     }
 }
 
-a.btn-cta-primary, .btn-cta-primary { 
-    background: @btn-color;
-    border: 1px solid @btn-color;
+a.btn-cta-primary, .btn-cta-primary {
+    background: $btn-color;
+    border: 1px solid $btn-color;
     color: #fff;
     font-weight:600;
     text-transform: uppercase;
     &:hover {
-        background: darken(@btn-color, 5%);
-        border: 1px solid darken(@btn-color, 5%);
+        background: darken($btn-color, 5%);
+        border: 1px solid darken($btn-color, 5%);
         color: #fff;
     }
 }
 
-a.btn-cta-secondary,  .btn-cta-secondary { 
-    background: @btn-color-2;
-    border: 1px solid @btn-color-2;
+a.btn-cta-secondary,  .btn-cta-secondary {
+    background: $btn-color-2;
+    border: 1px solid $btn-color-2;
     color: #fff;
     font-weight:600;
     text-transform: uppercase;
     &:hover {
-        background: darken(@btn-color-2, 5%);
-        border: 1px solid darken(@btn-color-2, 5%);
+        background: darken($btn-color-2, 5%);
+        border: 1px solid darken($btn-color-2, 5%);
         color: #fff;
     }
 }
 
 .text-highlight {
-    color: darken(@color, 30%);
+    color: darken($color, 30%);
 }
 
 .label-theme {
-    background: @color-2;
+    background: $color-2;
     font-size: 12px;
 }
 
 a.dotted-link {
-    border-bottom: 1px dotted @color;
-    color: @color;
+    border-bottom: 1px dotted $color;
+    color: $color;
     &:hover {
         text-decoration: none;
-        color: darken(@color, 20%);
+        color: darken($color, 20%);
     }
 }
 
@@ -100,12 +100,12 @@ iframe {
 }
 */
 
-        
+
 /* ======= Header ======= */
 .header {
     padding: 30px 0;
-    background: @smoky-white;
-    border-top: 10px solid @color;
+    background: $smoky-white;
+    border-top: 10px solid $color;
     .btn {
         margin-top: 60px;
         font-weight: bold;
@@ -114,15 +114,15 @@ iframe {
         margin-right: 30px;
     }
     .profile-content {
-        
+
         .name {
-            color: darken(@color, 20%);
+            color: darken($color, 20%);
             font-size: 38px;
             margin-bottom: 5px;
             margin-top: 30px;
         }
         .desc {
-            color:@color;
+            color:$color;
             font-family: "Lato", arial, sans-serif;
             font-weight: 400;
             font-size: 24px;
@@ -131,15 +131,15 @@ iframe {
         }
         .social {
             a {
-                background: lighten(@color, 20%);
+                background: lighten($color, 20%);
                 width: 36px;
                 height: 36px;
                 display: inline-block;
-                .border-radius(50%);
+                @include border-radius(50%);
                 color: #fff;
                 text-align: center;
                 &:hover {
-                    background: @color;
+                    background: $color;
                 }
                 .fa {
                     font-size: 20px;
@@ -157,7 +157,7 @@ iframe {
 }
 .section {
     margin-bottom: 30px;
-    
+
     .section-inner {
         background: #fff;
         padding: 30px;
@@ -165,7 +165,7 @@ iframe {
     .heading {
         margin-top: 0;
         margin-bottom: 30px;
-        color: darken(@color, 15%);
+        color: darken($color, 15%);
         font-size: 24px;
     }
     .content {
@@ -180,7 +180,7 @@ iframe {
 
 /* About Section */
 .about {
-    
+
 }
 
 /* Latest Section */
@@ -195,14 +195,14 @@ iframe {
                 font-size: 12px;
             }
             a {
-                color: @color;
+                color: $color;
                 &:hover {
-                    color: darken(@color, 10%);
+                    color: darken($color, 10%);
                 }
-            }     
+            }
         }
         .project-image:hover {
-            .opacity(0.8);           
+            @include opacity(0.8);
         }
     }
     .divider {
@@ -217,7 +217,7 @@ iframe {
         }
         .summary {
             margin-bottom: 30px;
-            color: @color;
+            color: $color;
         }
         img {
             margin-bottom: 30px;
@@ -229,7 +229,7 @@ iframe {
     .featured-image {
         position: relative;
         .text {
-            background: @color-2;
+            background: $color-2;
             color: #fff;
         }
         .ribbon {
@@ -239,7 +239,7 @@ iframe {
             width: 110px;
             height: 110px;
             overflow: hidden;
-            
+
             .text {
                 font-family: 'Montserrat', sans-serif;
                 position: relative;
@@ -251,14 +251,14 @@ iframe {
                 font-weight: bold;
                 text-align: center;
                 text-transform: uppercase;
-                color: #fff;           
-                background-color: @btn-color-2;
-                .transform (rotate(45deg) translate3d(0,0,0));
+                color: #fff;
+                background-color: $btn-color-2;
+                @include transform (rotate(45deg) translate3d(0,0,0));
                 &:before, &:after {
                     content: '';
                     position: absolute;
                     bottom: -5px;
-                    border-top: 5px solid darken(@btn-color-2, 20%);
+                    border-top: 5px solid darken($btn-color-2, 20%);
                     border-left: 5px solid transparent;
                     border-right: 5px solid transparent;
                 }
@@ -279,18 +279,18 @@ iframe {
         margin-bottom: 30px;
         .title {
             font-size: 16px;
-            margin-top: 0; 
+            margin-top: 0;
             margin-bottom:5px;
             line-height: 1.5;
             a {
-                color: @color;
+                color: $color;
                 &:hover {
-                    color: darken(@color, 10%);
+                    color: darken($color, 10%);
                 }
             }
         }
-        
-        
+
+
     }
 }
 
@@ -303,22 +303,22 @@ iframe {
             margin-top: 0;
             margin-bottom: 5px;
             line-height: 1.5;
-            
+
             .place {
-                color: @grey;
-                font-weight: normal; 
+                color: $grey;
+                font-weight: normal;
                 a {
-                    color: @grey;
+                    color: $grey;
                     &:hover {
-                        color: darken(@grey, 20%);
+                        color: darken($grey, 20%);
                     }
                 }
             }
             .year {
-                color: @grey;
+                color: $grey;
                 font-weight: normal;
             }
-        }        
+        }
     }
 
 }
@@ -326,7 +326,7 @@ iframe {
 /* Git section */
 .ghfeed {
     height: 600px;
-    .reset-box-sizing();
+    @include reset-box-sizing();
 }
 
 
@@ -334,7 +334,7 @@ iframe {
 .info {
     .fa {
         margin-right: 15px;
-        color: lighten(@color, 30%);
+        color: lighten($color, 30%);
         &.fa-envelope-o {
             font-size: 14px;
         }
@@ -342,7 +342,7 @@ iframe {
     ul {
         margin-bottom: 0;
     }
-    
+
     li {
         margin-bottom: 15px;
         &:last-child {
@@ -367,7 +367,7 @@ iframe {
             margin-top: 0;
             margin-bottom: 10;
             .level-label {
-                color: lighten(@color, 30%);
+                color: lighten($color, 30%);
                 font-size: 14px;
                 font-weight: 400;
                 font-family: "Lato", arial, sans-serif;
@@ -375,18 +375,18 @@ iframe {
                 right: 0;
                 top: 0;
             }
-            
+
         }
         .level-bar {
             height: 15px;
-            background: darken(@smoky-white, 5%);
+            background: darken($smoky-white, 5%);
         }
         .level-bar-inner {
             height: 15px;
-            background: lighten(@color-2, 15%);
+            background: lighten($color-2, 15%);
         }
     }
-    
+
 }
 
 /* Testimonials section */
@@ -397,27 +397,27 @@ iframe {
             margin-bottom: 0;
         }
         .quote {
-            color: @text-color-secondary;
+            color: $text-color-secondary;
             font-size: 16px;
-            border-left-color: lighten(@color-2, 30%);
+            border-left-color: lighten($color-2, 30%);
             margin-bottom: 15px;
-            
+
             .fa {
-                color: lighten(@color-2, 20%);
+                color: lighten($color-2, 20%);
                 margin-right: 15px;
             }
-            
+
         }
         .source {
             font-size: 14px;
             padding-left: 30px;
             font-weight: 500;
             .name {
-                color: lighten(@color, 10%);
+                color: lighten($color, 10%);
                 font-weight: 600;
             }
             .title {
-                color: @grey;
+                color: $grey;
             }
         }
     }
@@ -437,11 +437,11 @@ iframe {
         .university {
             font-family: "Lato", arial, sans-serif;
             font-size: 13px;
-            color: @grey;
+            color: $grey;
             font-weight: 600;
             padding-left: 25px;
             .year {
-                color: lighten(@color, 20%);
+                color: lighten($color, 20%);
                 font-weight: 500;
             }
         }
@@ -453,16 +453,16 @@ iframe {
     .item {
         margin-bottom: 15px;
         .title {
-            color: @color;
+            color: $color;
         }
         .level {
-            color: @grey;
+            color: $grey;
         }
         &:last-child {
             margin-bottom: 0;
         }
         .fa {
-            color: lighten(@color-2, 20%);
+            color: lighten($color-2, 20%);
         }
     }
 }
@@ -475,9 +475,9 @@ iframe {
             font-size: 18px;
             line-height: 1.3;
             a {
-                color: @color;
+                color: $color;
                 &:hover {
-                    color: darken(@color, 10%);
+                    color: darken($color, 10%);
                 }
             }
         }
@@ -485,7 +485,7 @@ iframe {
             margin-bottom: 0;
         }
     }
-    
+
 }
 
 /* List section */
@@ -496,9 +496,9 @@ iframe {
             margin-right: 5px;
         }
         a {
-            color: @color;
+            color: $color;
             &:hover {
-                color: darken(@color, 20%);
+                color: darken($color, 20%);
             }
         }
     }
@@ -512,9 +512,9 @@ iframe {
             margin-right: 5px;
         }
         a {
-            color: @color;
+            color: $color;
             &:hover {
-                color: darken(@color, 20%);
+                color: darken($color, 20%);
             }
         }
     }
@@ -526,21 +526,21 @@ iframe {
 /* ======= Footer ======= */
 
 .footer {
-    background: darken(@color, 30%);
-    color: #fff;  
-    padding: 10px 0;  
-    
-    
+    background: darken($color, 30%);
+    color: #fff;
+    padding: 10px 0;
+
+
     .copyright {
         line-height: 1.6;
-        color: lighten(@color, 15%);
-        font-size: 14px;       
-    }  
-    
+        color: lighten($color, 15%);
+        font-size: 14px;
+    }
+
     a {
         color: #fff;
     }
     .fa-heart {
-        color: @heart;
+        color: $heart;
     }
 }
