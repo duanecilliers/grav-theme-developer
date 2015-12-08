@@ -25,5 +25,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.6",
+    "font-awesome": "font-awsome#~4.5.0",
+    "jquery": "~2.1.4"
+  }
 }
