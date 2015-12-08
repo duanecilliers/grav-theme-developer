@@ -1,0 +1,34 @@
+{
+  "name": "grav-theme-developer",
+  "homepage": "https://github.com/duanecilliers/grav-theme-developer",
+  "authors": [
+    "NunoPress LLC <hello@nunopress.com>",
+    "Duane Cilliers <hello@duane.co.za>"
+  ],
+  "description": "Developer is a free responsive Grav theme designed to help developers promote their work.",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "grav",
+    "theme",
+    "bootstrap",
+    "blog",
+    "develop",
+    "resume",
+    "cv"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.6",
+    "font-awesome": "font-awsome#~4.5.0",
+    "jquery": "~2.1.4"
+  }
+}
