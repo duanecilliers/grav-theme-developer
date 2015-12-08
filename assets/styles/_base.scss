@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6  {
 
 a {
     color: $color-2;
-    .transition (all 0.4s ease-in-out);
+    @include transition (all 0.4s ease-in-out);
     &:hover {
         text-decoration: underline;
         color: darken($color, 10%);
@@ -29,7 +29,7 @@ a {
 }
 
 .btn, a.btn {
-    .transition (all 0.4s ease-in-out);
+    @include transition (all 0.4s ease-in-out);
     font-family: 'Montserrat', arial, sans-serif;
     padding: 8px 16px;
     font-weight:bold;
@@ -135,7 +135,7 @@ iframe {
                 width: 36px;
                 height: 36px;
                 display: inline-block;
-                .border-radius(50%);
+                @include border-radius(50%);
                 color: #fff;
                 text-align: center;
                 &:hover {
@@ -202,7 +202,7 @@ iframe {
             }
         }
         .project-image:hover {
-            .opacity(0.8);
+            @include opacity(0.8);
         }
     }
     .divider {
@@ -253,7 +253,7 @@ iframe {
                 text-transform: uppercase;
                 color: #fff;
                 background-color: $btn-color-2;
-                .transform (rotate(45deg) translate3d(0,0,0));
+                @include transform (rotate(45deg) translate3d(0,0,0));
                 &:before, &:after {
                     content: '';
                     position: absolute;
@@ -326,7 +326,7 @@ iframe {
 /* Git section */
 .ghfeed {
     height: 600px;
-    .reset-box-sizing();
+    @include reset-box-sizing();
 }
 
 
