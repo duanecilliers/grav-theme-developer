@@ -15,22 +15,19 @@
       {% endblock %}
 
       {% block head_title %}
-        <title>{% if page.header.title and page.url(true) != base_url %}{{ page.header.title }} | {% endif %}{{ site.title }}</title>
+        <title>{% if page.header.title and (page.url != base_url or 'error' == page.template) %}{{ page.header.title }} | {% endif %}{{ site.title }}</title>
       {% endblock %}
 
       <link rel="canonical" href="{{ page.url(true) }}" />
       <link rel="shortcut icon" href="{{ theme_url }}/assets/images/favicon.ico" />
 
       {% block head_css %}
-        {% do assets.add('theme://assets/plugins/bootstrap/css/bootstrap.min.css', 106) %}
-        {% do assets.add('theme://assets/plugins/font-awesome/css/font-awesome.css', 105) %}
-
         {% if theme_config.github %}
           {% do assets.add('http://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css', 104) %}
           {% do assets.add('http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.css', 103) %}
         {% endif %}
 
-        {% do assets.add('theme://assets/css/styles.css', 102) %}
+        {% do assets.add('theme://dist/styles/main.css', 102) %}
 
         {# Webfonts #}
         {% do assets.addCss('http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic', 101) %}
@@ -94,7 +91,7 @@
     {% block body_footer %}
       <footer class="footer">
         <div class="container text-center">
-          <small class="copyright">Copyright &copy; {{ 'NOW' | date('Y') }} by {{ site.title }} - Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">3rd Wave Media</a> for developers</small>
+          <small class="copyright">Copyright &copy; {{ 'NOW' | date('Y') }} {{ site.title }} | Design: <a href="http://themes.3rdwavemedia.com">3rd Wave Media</a> | Grav Theme: <a href="https://nunopress.com">NunoPress LLC</a></small>
         </div>
       </footer>
     {% endblock %}
