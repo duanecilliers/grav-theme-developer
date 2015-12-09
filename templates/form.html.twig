@@ -80,7 +80,9 @@
             <section class="{{ page.header.section_class | default(page.slug) }} section">
               <div class="section-inner">
                 <h2 class="heading">{{ page.title }}</h2>
-                <div class="content">{{ page.content }}</div>
+                <div class="content">{{ page.content }}
+                {% include "forms/form.html.twig" %}
+                </div>
               </div>
             </section>
           </div>
