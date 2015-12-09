@@ -1,0 +1,16 @@
+.form-field {
+  @extend .form-group;
+}
+.form-input-wrapper input,
+.form-textarea-wrapper textarea  {
+  @extend .form-control;
+}
+
+form button {
+  @extend .btn;
+  @extend .btn-success;
+
+  &[type="reset"] {
+    @extend .btn-danger;
+  }
+}
