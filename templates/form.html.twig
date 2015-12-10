@@ -54,7 +54,9 @@
       <header class="header">
         <div class="container">
           {% set profile_image = (theme_config.profile.avatar_url) ?: 'http://gravatar.com/avatar/' ~ site.author.email | md5 ~ '?s=180' %}
-          <img class="profile-image img-responsive pull-left img-circle" src="{{ profile_image }}" alt="{{ theme_config.profile.name | default(site.author.name) }}" height="180" />
+          <a href="{{ site.url }}">
+            <img class="profile-image img-responsive pull-left img-circle" src="{{ profile_image }}" alt="{{ theme_config.profile.name | default(site.author.name) }}" height="180" />
+          </a>
 
           <div class="profile-content pull-left">
             <h1 class="name">{{ theme_config.profile.name | default(site.author.name) }}</h1>
